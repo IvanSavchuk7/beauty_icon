@@ -77,12 +77,13 @@
             <div class="basenji-extralight">МАКІЯЖУ</div>
           </div>
           <div class="right mobile">
-            <div class="collage">
+            <div class="collage" id="collage-mobile">
               <div>
-                <img src="assets/images/collage-1.png" alt="">
+                <img src="assets/images/collage-1.png" alt="" class="left">
               </div>
               <div>
-                <img src="assets/images/collage-2.png" alt="">
+                <img src="assets/images/collage-2.png" alt="" class="right">
+                <img src="assets/images/pink-star.svg" alt="" class="abs right">
               </div>
             </div>
           </div>
@@ -129,6 +130,8 @@
   </main>
   <script>
     const collage = document.getElementById('collage');
+    const collageMobile = document.getElementById('collage-mobile');
+
     let hasAnimated = false; // анімація спрацює лише один раз при появі
     let intervalId;
 
@@ -139,7 +142,15 @@
 
           // Перша зміна місцями
           collage.classList.toggle('switch');
+          collageMobile.classList.toggle('switch');
 
+          setTimeout(() => {
+            intervalId = setInterval(() => {
+              collageMobile.classList.toggle('switch');
+            }, 5000); // міняє місцями кожні 5 секунд після першої появи
+          }, 5000); // затримка 5 сек після першого анімування
+
+          observer.unobserve(collageMobile); // спостереження більше не потрібно
           // Потім таймер на наступні автоматичні зміни
           setTimeout(() => {
             intervalId = setInterval(() => {
@@ -153,6 +164,7 @@
     }, { threshold: 0.5 }); // коли 50% блоку видно
 
     observer.observe(collage);
+    observer.observe(collageMobile);
   </script>
 </body>
 </html>

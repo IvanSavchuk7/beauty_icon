@@ -502,7 +502,7 @@ section.offer .form img.mobile {
     section.offer .about .right .collage img {
         height: 20rem;
     }
-    section.offer .about .right .collage > div:last-child::after {
+    section.offer .about .right .collage > div:last-child .abs {
         width: 15rem;
         height: 15rem;
         left: -15%;
@@ -619,7 +619,7 @@ section.offer .form img.mobile {
     section.offer .about .right .collage img {
         height: 13rem;
     }
-    section.offer .about .right .collage > div:last-child::after {
+    section.offer .about .right .collage > div:last-child .abs {
         top: -55%;
     }
 }
@@ -684,13 +684,13 @@ section.offer .form img.mobile {
         height: auto;
         width: 100%;
     }
-    section.offer .about .right .collage > div:last-child::after {
+    section.offer .about .right .collage > div:last-child .abs {
         width: 25vw;
         height: 25vw;
         top: -45%;
         left: -15%;
     }
-    section.offer .about .right:not(.mobile) {
+    section.offer .about .left > .right:not(.mobile) {
         display: none;
     }
     section.offer .about .right.mobile {
@@ -916,7 +916,7 @@ section.offer .form img.mobile {
     section.offer .about .right .collage > div {
         width: 50%;
     }
-    section.offer .about .right .collage > div:last-child::after {
+    section.offer .about .right .collage > div:last-child .abs {
         width: 30vw;
         height: 30vw;
     }
