@@ -974,6 +974,11 @@ section.offer .form img.mobile {
     section.hero .description > div {
         font-size: 1.1rem;
     }
+    .marquee-text {
+        font-size: calc(100vw / 2.9);
+        animation: marquee 20s linear infinite;
+        white-space: nowrap;
+    }
 }
 @media only screen and (max-width: 420px) {
     section.offer .about .title > div {
