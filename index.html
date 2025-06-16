@@ -5,6 +5,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content="BEAUTY ICON - передзапис на легендраний курс від Єгора Андрюшина" name="description">
+  <meta content="BEAUTY ICON - передзапис на легендраний курс від Єгора Андрюшина" property="og:title">
+  <meta content="BEAUTY ICON - передзапис на легендраний курс від Єгора Андрюшина" property="og:description">
+  <meta content="" property="og:image">
+  <meta content="BEAUTY ICON - передзапис на легендраний курс від Єгора Андрюшина" property="twitter:title">
+  <meta content="BEAUTY ICON - передзапис на легендраний курс від Єгора Андрюшина" property="twitter:description">
+  <meta content="" property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
   <link rel="stylesheet" href="style.css">
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/apple-touch-icon-114x114.png" />
@@ -55,7 +64,7 @@
           <div class="fixel-bold">Хочеш бути <br>серед перших?</div>
           <div class="fixel-regular">Встигни потрапити до списку <br>учасників ще до відкриття <br>набору!</div>
         </div>
-        <div class="button pulse"><span class="fixel-semibold">ЗАРЕЄСТРУВАТИСЯ</span><img src="assets/images/arrow-white-2.svg" alt=""></div>
+        <a href="/apply" target="_blank" class="button pulse"><span class="fixel-semibold">ЗАРЕЄСТРУВАТИСЯ</span><img src="assets/images/arrow-white-2.svg" alt=""></a>
         <div class="right">
           <div class="fixel-bold">Реєструйся — і одразу отримай подарунки:</div>
           <div>
@@ -115,7 +124,7 @@
               <div class="basenji-extralight">одразу отримуй</div>
               <div class="basenji-extralight">Кодекс Візажиста</div>
             </div>
-            <div class="button pulse"><span class="fixel-semibold">ЗАРЕЄСТРУВАТИСЯ</span><img src="assets/images/arrow-white-2.svg" alt=""></div>
+            <a href="/apply" target="_blank" class="button pulse"><span class="fixel-semibold">ЗАРЕЄСТРУВАТИСЯ</span><img src="assets/images/arrow-white-2.svg" alt=""></a>
           </div>
           <div class="description">
             <div class="title fixel-regular">Новий Стандарт У Бʼюті: <img src="assets/images/abs-star.svg" alt="" class="abs"></div>
@@ -140,7 +149,6 @@
         if (entry.isIntersecting && !hasAnimated) {
           hasAnimated = true;
 
-          // Перша зміна місцями
           collage.classList.toggle('switch');
           collageMobile.classList.toggle('switch');
 
@@ -148,20 +156,19 @@
             intervalId = setInterval(() => {
               collageMobile.classList.toggle('switch');
             }, 5000); // міняє місцями кожні 5 секунд після першої появи
-          }, 5000); // затримка 5 сек після першого анімування
+          }, 2000);
 
-          observer.unobserve(collageMobile); // спостереження більше не потрібно
-          // Потім таймер на наступні автоматичні зміни
+          observer.unobserve(collageMobile);
           setTimeout(() => {
             intervalId = setInterval(() => {
               collage.classList.toggle('switch');
-            }, 5000); // міняє місцями кожні 5 секунд після першої появи
-          }, 5000); // затримка 5 сек після першого анімування
+            }, 5000);
+          }, 2000);
 
-          observer.unobserve(collage); // спостереження більше не потрібно
+          observer.unobserve(collage);
         }
       });
-    }, { threshold: 0.5 }); // коли 50% блоку видно
+    }, { threshold: 0.5 });
 
     observer.observe(collage);
     observer.observe(collageMobile);
