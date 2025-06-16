@@ -690,7 +690,7 @@ section.offer .form img.mobile {
         top: -45%;
         left: -15%;
     }
-    section.offer .about .left > .right:not(.mobile) {
+    section.offer .about > .right:not(.mobile) {
         display: none;
     }
     section.offer .about .right.mobile {
