@@ -1,0 +1,1026 @@
+@font-face {
+    font-family: 'Fixel Regular';
+    src: local('Fixel Display Regular'), local('Fixel-Display-Regular'),
+    url('assets/fonts/FixelDisplay-Regular.woff2') format('woff2'),
+    url('assets/fonts/FixelDisplay-Regular.woff') format('woff'),
+    url('assets/fonts/FixelDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Fixel Bold';
+    src: local('Fixel Display Bold'), local('Fixel-Display-Bold'),
+    url('assets/fonts/FixelDisplay-Bold.woff2') format('woff2'),
+    url('assets/fonts/FixelDisplay-Bold.woff') format('woff'),
+    url('assets/fonts/FixelDisplay-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Fixel Semibold';
+    src: local('Fixel Display SemiBold'), local('Fixel-Display-SemiBold'),
+    url('assets/fonts/FixelDisplay-SemiBold.woff2') format('woff2'),
+    url('assets/fonts/FixelDisplay-SemiBold.woff') format('woff'),
+    url('assets/fonts/FixelDisplay-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Basenji ExtraLight';
+    src: url('assets/fonts/basenji-extralight.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Basenji Light';
+    src: url('assets/fonts/basenji-light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+.basenji-extralight {
+    font-family: 'Basenji ExtraLight', sans-serif;
+}
+.basenji-light {
+    font-family: 'Basenji Light', sans-serif;
+}
+.fixel-regular {
+    font-family: 'Fixel Regular', sans-serif;
+}
+.fixel-bold {
+    font-family: 'Fixel Bold', sans-serif;
+}
+.fixel-semibold {
+    font-family: 'Fixel Semibold', sans-serif;
+}
+.color-white {
+    color: #FFFFFF;
+}
+
+html {
+    font-size: 20px;
+    min-height: 100vh;
+    background: #FFFFFF;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #1D1D1D;
+    letter-spacing: 0;
+    line-height: 104%;
+    text-decoration: none;
+    border: none;
+}
+section.hero {
+    overflow: hidden;
+    padding: 0 3rem 3rem 3rem;
+    min-height: 90vh;
+    background-image: url('assets/images/bg-star-1.svg'), url('assets/images/bg-star-2.svg');
+    background-repeat: no-repeat;
+    background-size: 17.5rem 17.5rem, 15rem, 15rem;
+    background-position: 0 -3.5rem, 100% 100%;
+}
+section.hero .pre-record {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+section.hero .pre-record > .inner {
+    width: fit-content;
+    background: #F25B92;
+    padding: 1rem 2rem 1.5rem 2rem;
+    font-size: 2rem;
+}
+section.hero .pre-record::before {
+    content: '';
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    display: block;
+    background-image: url('assets/images/abs-lips.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 100%;
+    right: 0;
+}
+section.hero .pre-record::after {
+    content: '';
+    background-image: url('assets/images/abs-star.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 7rem;
+    width: 7rem;
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 6rem;
+}
+section.hero .description {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+section.hero .description > div {
+    font-size: 1.2rem;
+}
+section.hero .description .img {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    border: 2px solid #F25B92;
+    background-image: url("assets/images/expert-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+section.hero .title {
+    font-size: calc(100vw / 3.9);
+    text-align: center;
+    position: relative;
+    margin-bottom: calc(60vw / 4.4);
+}
+section.hero .title .abs {
+    width: 60vw;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translateX(-50%);
+}
+section.hero .bottom {
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+    align-items: center;
+}
+section.hero .bottom > div {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+section.hero .bottom .button,
+section.offer .action .button{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-direction: row;
+    flex: 2;
+    background-image: url("assets/images/button-bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: .5rem 2.5rem .5rem 2rem;
+    border: 10px solid #f8acc7;
+    border-radius: 100px;
+    height: fit-content;
+}
+section.hero .bottom .button > span,
+section.offer .action .button > span {
+    color: #FFFFFF;
+}
+section.hero .bottom .button > img,
+section.offer .action .button > img {
+    width: 2rem;
+    height: 2rem;
+}
+section.hero .bottom * {
+    font-size: 1.1rem;
+}
+section.hero .bottom .left div:first-child,
+section.hero .bottom .right div:first-child{
+    font-size: 1.4rem;
+}
+section.hero .bottom .right div:last-child {
+    display: flex;
+    gap: .5rem;
+}
+section.hero .bottom .right div:last-child img {
+    width: 3.5rem;
+}
+section.hero .bottom .right div:last-child .right-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+section.hero .bottom .right .right-inner div:last-child {
+    display: flex;
+    gap: .25rem;
+    align-items: center;
+}
+section.hero .bottom .right-inner div:last-child span:first-child {
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    background-color: #F25B92;
+}
+section.offer {
+    padding: 4rem 0 0 0;
+    background-image: url('assets/images/bg-star-4.svg');
+    background-repeat: no-repeat;
+    background-size: 15rem, 15rem;
+    background-position: 100% 0;
+}
+section.offer > div {
+    padding-right: 2rem;
+}
+section.offer .about {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+section.offer .about > .left {
+    flex: 4;
+}
+section.offer .about > .right {
+    flex: 3;
+}
+section.offer .about > .left > .title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: fit-content;
+}
+section.offer .about .title > div {
+    font-size: 2.8rem;
+}
+section.offer .about .title > div:first-child {
+    padding-left: 3.5rem;
+}
+section.offer .about .title > div:last-child {
+    text-align: right;
+    position: relative;
+    padding-right: 3rem;
+}
+section.offer .about .title > div:last-child::before {
+    content: '';
+    width: 10rem;
+    height: 3.5rem;
+    position: absolute;
+    right: 18rem;
+    background-image: url("assets/images/wow-icon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section.offer .about .tooltip {
+    display: flex;
+    padding-top: 2rem;
+    align-items: center;
+    gap: 2rem;
+}
+section.offer .about .tooltip img {
+    transform: scaleX(-1);
+    margin: 0 2rem;
+    width: 6rem;
+    height: 6rem;
+}
+section.offer .about .tooltip .text {
+    line-height: 120%;
+}
+section.offer .about .right .collage {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+}
+section.offer .about .right .collage > div {
+    position: relative;
+    z-index: 10;
+}
+section.offer .about .right .collage img {
+    z-index: 10;
+    position: relative;
+    background: #FFFFFF;
+    height: 15rem;
+    width: auto;
+    border: 1px solid rgba(29, 29, 29, 0.26);
+}
+section.offer .about .right .collage > div:last-child {
+    margin-top: 6rem;
+    z-index: 0;
+}
+section.offer .about .right .collage > div:last-child .abs {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    left: -20%;
+    top: -45%;
+    background-image: url("assets/images/pink-star.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    z-index: -1;
+}
+section.offer .about .right.mobile {
+    display: none;
+}
+section.offer .form {
+    background-image: url("assets/images/test.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100% 100%;
+    padding-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+section.offer .form > .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+section.offer .form > .content .action {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: #EBEBEB;
+    padding: 2rem;
+}
+section.offer .form > .content .action .abs {
+    position: absolute;
+    width: 20rem;
+    height: 12rem;
+    bottom: -3.5rem;
+    left: 55%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+section.offer .form > .content .action .title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+section.offer .form > .content .action .title > div {
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+section.offer .action .button {
+    margin:0  5rem;
+}
+section.offer .form .description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+section.offer .form .description .title {
+    padding: .5rem 3rem;
+    background: #1D1D1D;
+    color: #FFFFFF;
+    width: fit-content;
+    line-height: 120%;
+    font-size: 1.5rem;
+    position: relative;
+}
+section.offer .form .description .title .abs {
+    position: absolute;
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+section.offer .form .description .text {
+    text-align: center;
+    font-size: 1.2rem;
+}
+section.offer .form img.mobile {
+    display: none;
+}
+.marquee-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;         /* або фіксована ширина */
+    white-space: nowrap;
+}
+
+.marquee-text {
+    font-size: calc(100vw / 3.9);
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.pulse {
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(248, 105, 158, 0.5);
+    }
+    70% {
+        transform: scale(1.03);
+        box-shadow: 0 0 0 1rem rgba(248, 105, 158, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(248, 105, 158, 0);
+    }
+}
+
+.collage img {
+    transition: transform 2s ease-in-out;
+}
+
+.collage.switch .left {
+    transform: translateX(calc(100% + 1.5rem));
+}
+
+.collage.switch .right {
+    transform: translateX(calc(-100% - 1.5rem));
+}
+
+
+
+@media screen and (min-width: 2560px) and (max-width: 3840px) {
+    html {
+        font-size: 28px;
+    }
+    section.hero {
+        padding: 0 10rem 5rem 10rem;
+        min-height: auto;
+    }
+    section.hero .title {
+        font-size: calc(60vw / 3.9);
+        margin-bottom: calc(45vw / 4.4);
+    }
+    section.hero .title .abs {
+        width: 40vw;
+        left: 50%;
+    }
+    section.hero .bottom {
+        margin: auto;
+        width: fit-content;
+    }
+    section.hero .bottom br {
+        display: none;
+    }
+    section.offer .about {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    section.offer .about .title > div {
+        font-size: 3rem;
+    }
+    section.offer .about .title > div:last-child {
+        padding: 0;
+    }
+    section.offer .about .title > div:last-child::before {
+        width: 10rem;
+        height: 4rem;
+        right: 17rem;
+    }
+    section.offer .about .tooltip {
+        padding-top: 3rem;
+    }
+    section.offer .about .tooltip img {
+        width: 7vw;
+        height: 7vw;
+    }
+    section.offer .about .tooltip .text {
+        font-size: 1.5rem;
+    }
+    section.offer .about .right .collage img {
+        height: 20rem;
+    }
+    section.offer .about .right .collage > div:last-child::after {
+        width: 15rem;
+        height: 15rem;
+        left: -15%;
+        top: -50%;
+    }
+    section.offer .form {
+        padding: 4rem 18vw 2rem 18vw;
+        background-position: 85% 100%;
+    }
+    section.offer .form > .content {
+        width: 60%;
+    }
+    section.offer .form > .content .action {
+        padding: 2rem 1.5rem;
+    }
+    section.offer .action .button {
+        margin: auto;
+        max-width: 670px;
+    }
+}
+@media only screen  and (max-width: 2559px) {
+    html {
+        font-size: 24px;
+    }
+    section.hero {
+        min-height: auto;
+    }
+    section.hero .bottom {
+        margin: auto;
+        width: fit-content;
+    }
+    section.hero .title {
+        font-size: calc(70vw / 3.9);
+        margin-bottom: calc(50vw / 4.4);
+    }
+    section.hero .title .abs {
+        width: 50vw;
+        left: 45%;
+    }
+    section.offer .about {
+        padding: 0 6rem;
+    }
+    section.offer .form {
+        padding: 4rem 12vw 2rem 12vw;
+        background-position: 85% 100%;
+    }
+    section.offer .action .button {
+        margin: 0 4rem;
+    }
+    section.offer .form > .content .action .title > div {
+        font-size: 2.2rem;
+    }
+}
+@media only screen and (max-width: 1919px) {
+    html {
+        font-size: 22px;
+    }
+    section.hero {
+        padding: 0 5rem 5rem 5rem;
+        min-height: auto;
+    }
+    section.hero .title {
+        font-size: calc(90vw / 3.9);
+        margin-bottom: calc(60vw / 4.4);
+    }
+    section.hero .pre-record::after {
+        left: 3rem;
+    }
+    section.hero .title .abs {
+        width: 60vw;
+        left: 45%;
+    }
+    section.offer .about {
+        padding: 0 2.5rem;
+    }
+    section.offer .action .button {
+        margin: 0 2rem;
+    }
+    section.offer .form {
+        background-position: 95% 100%;
+    }
+}
+@media only screen and (max-width: 1599px) {
+    html {
+        font-size: 20px;
+    }
+    section.hero {
+        padding: 0 3rem 3rem 3rem;
+    }
+    section.hero .bottom br {
+        display: initial;
+    }
+    section.hero .bottom {
+        width: 100%;
+    }
+    section.offer .form {
+        background-position: 100% 100%;
+        padding: 0 2rem 3rem 0;
+    }
+    section.offer .action .button {
+        margin: 0 5rem;
+    }
+    section.offer .form {
+        padding: 4rem 2rem 2rem 2rem;
+    }
+}
+@media only screen and (max-width: 1365px) {
+    html {
+        font-size: 17px;
+    }
+    section.hero {
+        padding: 0 3rem 8rem 3rem;
+    }
+    section.offer .about .right .collage img {
+        height: 13rem;
+    }
+    section.offer .about .right .collage > div:last-child::after {
+        top: -55%;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    html {
+        font-size: 16px;
+    }
+    section.hero {
+        padding: 0 1.25rem 2rem 1.25rem;
+        min-height: 700px;
+        background-size: 12.5rem 12.5rem, 10rem, 10rem;
+    }
+    section.offer {
+        background-size:10rem, 10rem;
+    }
+    section.hero .title {
+        font-size: calc(100vw / 3.9);
+        margin-bottom: calc(80vw / 4.4);
+    }
+    section.hero .title .abs {
+        width: 80vw;
+        left: 45%;
+    }
+    section.hero .bottom br {
+        display: none;
+    }
+    section.hero .bottom * {
+        font-size: .8rem !important;
+    }
+    section.hero .bottom {
+        gap: 1.5rem;
+    }
+    section.hero .bottom .button,
+    section.offer .action .button {
+        padding: .25rem 2rem .25rem 1.5rem;
+        border: 7px solid #f8acc7;
+    }
+    section.hero .bottom > div {
+        gap: 1rem;
+    }
+    section.hero .pre-record::after {
+        left: 1rem;
+        width: 6rem;
+        height: 6rem;
+    }
+    section.hero .bottom .right-inner div:last-child span:first-child  {
+        padding: 5px 8px;
+    }
+    section.offer .about {
+        flex-direction: column;
+        padding: 0 1.5rem;
+    }
+    section.offer .about > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section.offer .about .right .collage > div {
+        width: 45%;
+    }
+    section.offer .about .right .collage img {
+        height: auto;
+        width: 100%;
+    }
+    section.offer .about .right .collage > div:last-child::after {
+        width: 25vw;
+        height: 25vw;
+        top: -45%;
+        left: -15%;
+    }
+    section.offer .about .right:not(.mobile) {
+        display: none;
+    }
+    section.offer .about .right.mobile {
+        margin-top: 6rem;
+    }
+    section.offer .about .title > div {
+        font-size: 3.5rem;
+    }
+    section.offer .about .title > div:last-child::before {
+        width: 10rem;
+        height: 3.5rem;
+        right: 21rem;
+    }
+    section.offer .about .tooltip {
+        position: relative;
+        padding-top: 8rem;
+    }
+    section.offer .about .tooltip img {
+        position: absolute;
+        left: 0;
+        top: -7rem;
+        z-index: 555;
+        width: 16rem;
+        height: 16rem;
+        margin: 0;
+    }
+    section.offer .about .tooltip .text {
+        font-size: 2.5rem;
+        padding: 0 10vw;
+        text-align: center;
+    }
+    section.offer .about .tooltip .text br {
+        display: none;
+    }
+    section.offer .form {
+        padding-top: 6rem;
+    }
+    section.offer .form {
+        background-position: 140% 100%;
+    }
+    section.offer .about .right.mobile {
+        display: block;
+    }
+    section.offer .about .right .collage {
+        justify-content: flex-start;
+        padding: 0 2rem;
+    }
+}
+@media only screen and (max-width: 950px) {
+    section.offer .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: none;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        padding-bottom: 0;
+    }
+    section.offer .form > .content .action {
+        position: relative;
+    }
+    section.offer .form > .content .action .abs {
+        left: 100%;
+        top: -4.5rem;
+        width: 16rem;
+        height: 10.5rem;
+    }
+    section.offer .form img.mobile {
+        display: block;
+        margin-top: -1rem;
+    }
+    section.offer .form > .content > img:not(.mobile) {
+        display: none;
+    }
+    section.offer .form > .content {
+        width: 100%;
+    }
+    section.offer .form > .content .action .title > div {
+        font-size: 3rem;
+    }
+    section.offer .action .button {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    section.offer .form .description .title {
+        font-size: 2rem;
+    }
+    section.offer .form .description .text {
+        font-size: 1.5rem;
+    }
+    section.offer .form .description .title .abs {
+        width: 5rem;
+        height: 5rem;
+    }
+    section.offer .action .button > span {
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 767px) {
+    section.hero .bottom {
+        flex-direction: column;
+    }
+    section.hero .bottom > div {
+        order: 1;
+    }
+    section.hero .bottom > .button {
+        order: 2;
+    }
+    section.hero .pre-record > .inner {
+        padding: .5rem 1rem .75rem 1rem;
+        font-size: 1.5rem;
+    }
+    section.hero .title {
+        font-size: calc(90vw / 3.9);
+        margin-bottom: calc(100vw / 3);
+    }
+    section.hero .title .abs {
+        width: 100vw;
+        left: 42.5%;
+    }
+    section.hero .bottom * {
+        font-size: 1.85rem !important;
+    }
+    section.hero .bottom > .left {
+        text-align: center;
+    }
+    section.hero .bottom .right > div:first-child {
+        width: 60%;
+    }
+    section.hero .bottom .right div:last-child img {
+        width: 5.5rem;
+    }
+    section.hero .bottom .right div:last-child .right-inner {
+        flex-direction: row;
+        align-items: center;
+    }
+    section.hero .bottom .right div:last-child .right-inner span {
+        font-size: 1rem !important;
+    }
+    section.hero .bottom .right .right-inner div:last-child {
+        gap: .7rem;
+    }
+    section.hero .pre-record::after {
+        display: none;
+    }
+    section.hero .description {
+        gap: .75rem;
+        font-size: 1rem;
+    }
+    section.hero .pre-record::before {
+        top: 25%;
+        height: 4rem;
+        width: 4rem;
+    }
+    section.hero .bottom .button,
+    section.offer .action .button {
+        padding: .75rem 2.75rem .75rem 2.25rem;
+        border: 10px solid #f8acc7;
+    }
+    section.offer .about .title > div {
+        font-size: 3rem;
+    }
+    section.offer .about .title > div:last-child::before {
+        width: 9rem;
+        height: 4.5rem;
+        right: 19rem;
+        top: -.75rem;
+    }
+    section.offer .form {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+    section.offer .form > .content .action .title > div {
+        font-size: 2.85rem;
+    }
+
+    section.offer .form > .content .action .abs {
+        left: 95%;
+        top: -6.5rem;
+        width: 16rem;
+        height: 11.5rem;
+    }
+    section.offer .form .description .title {
+        font-size: 1.75rem;
+    }
+    section.offer .about .right .collage {
+        padding: 0 10px;
+    }
+    section.offer .about > .left > .title {
+        gap: 7px;
+    }
+    section.hero .bottom {
+        gap: 2.5rem;
+    }
+    section.hero .bottom > div {
+        gap: 1.75rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    section.offer .about .tooltip img {
+        left: 0;
+        top: -5rem;
+        width: 12rem;
+        height: 12rem;
+    }
+    section.offer .about .tooltip .text {
+        font-size: 2rem;
+        padding: 0 10vw;
+        text-align: center;
+    }
+    section.offer .about .title > div {
+        font-size: 2.5rem;
+    }
+    section.offer .about .title > div:last-child::before {
+        width: 8rem;
+        height: 4rem;
+        right: 16rem;
+        top: -.5rem;
+    }
+    section.offer .about .title > div:first-child {
+        padding-left: 2.5rem;
+    }
+    section.offer .about .right .collage > div {
+        width: 50%;
+    }
+    section.offer .about .right .collage > div:last-child::after {
+        width: 30vw;
+        height: 30vw;
+    }
+    section.offer .form > .content .action {
+        padding: 1.5rem 1rem;
+    }
+    section.offer .form .description .text {
+        font-size: 1.5rem;
+    }
+    section.offer .form {
+        padding: 6rem 0 0 0;
+    }
+    section.offer .form > .content .action .abs {
+        left: 87%;
+        top: -7rem;
+        width: 16rem;
+        height: 11.5rem;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    html {
+        font-size: 14px;
+    }
+    section.hero {
+        padding: 0 1rem 1rem 1rem;
+    }
+    section.hero .description .img {
+        width: 5rem;
+        height: 5rem;
+    }
+    section.offer .about .tooltip .text {
+        padding: 0 4vw;
+    }
+    section.offer .about {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+    section.hero .bottom {
+        gap: 3rem;
+    }
+    section.hero .description .img {
+        width: 4rem;
+        height: 4rem;
+    }
+    section.hero .pre-record > .inner {
+        padding: 1rem 1.25rem 1.25rem 1.25rem;
+        font-size: 1.75rem;
+    }
+    section.hero .description > div {
+        font-size: 1.1rem;
+    }
+}
+@media only screen and (max-width: 420px) {
+    section.offer .about .title > div {
+        font-size: 2.2rem;
+    }
+    section.offer .about .title > div:last-child::before {
+        width: 8rem;
+        height: 4rem;
+        right: 15rem;
+        top: -.75rem;
+    }
+    section.offer .about .tooltip .text {
+        padding: 0;
+        font-size: 1.5rem;
+    }
+    section.hero {
+        padding: 0 .5rem 1rem .5rem;
+    }
+
+}
+@media only screen and (max-width: 400px) {
+    section.hero .description > div {
+        font-size: 1rem;
+    }
+    section.offer .form > .content .action .title > div {
+        font-size: 2.2rem;
+    }
+    section.offer .action .button {
+        margin: 0 1rem;
+    }
+    section.offer .form .description .title {
+        font-size: 1.35rem;
+    }
+}
+@media only screen and (max-width: 360px) {
+    html {
+        font-size: 10px;
+    }
+    section.hero {
+        min-height: 600px;
+    }
+    section.offer .about .title > div {
+        font-size: 2rem;
+    }
+    section.offer .about .title > div:last-child::before {
+        width: 7rem;
+        height: 2.5rem;
+        right: 15rem;
+    }
+}
